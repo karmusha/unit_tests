@@ -1,0 +1,13 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "target\\classes",
+    "java.project.referencedLibraries": [
+        "C:\\Users\\karmu\\.m2\\repository\\**\\*.jar"
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive",
+
+    "java.completion.favoriteStaticMembers": [
+        "org.assertj.core.api.Assertions.*"
+    ],
+    "java.dependency.showMembers": true
+}
