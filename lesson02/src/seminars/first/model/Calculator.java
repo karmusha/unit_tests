@@ -6,13 +6,13 @@ public class Calculator {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-//        int firstOperand = getOperand();
-//        int secondOperand = getOperand();
-//        char operator = getOperator();
-//        int result = calculation(firstOperand, secondOperand, operator);
-//        System.out.println("Operation result is: " + result);
+    //    int firstOperand = getOperand();
+    //    int secondOperand = getOperand();
+    //    char operator = getOperator();
+    //    int result = calculation(firstOperand, secondOperand, operator);
+    //    System.out.println("Operation result is: " + result);
 
-//        System.out.println(calculatingDiscount(-100, 25));
+    //    System.out.println(calculatingDiscount(-100, 25));
 
     }
 
@@ -65,7 +65,15 @@ public class Calculator {
         return result;
     }
 
+    // HW1.1: Придумайте и опишите (можно в псевдокоде) функцию извлечения корня и
+    // необходимые проверки для него используя граничные случаи
     public static double squareRootExtraction(double number) {
+
+        //  0
+        //  Отрицательные числа
+        //  Дробные значения корней
+        //  Целые
+
         double t;
         double squareRoot = number / 2;
         do {
@@ -74,45 +82,39 @@ public class Calculator {
         }
         while ((t - squareRoot) != 0);
         return squareRoot;
+
+        // или просто return Math.sqrt(number);
     }
 
-    /**
-     * Дз 1
-     * Нужно написать в калькуляторе метод вычисления суммы покупки со скидкой и проверить его, используя AssertJ
-     * Примерная сигнатура и тело метода:
-     *
-     * @param purchaseAmount сумма покупки
-     * @param discountAmount размер скидки
-     * @return результат
-     */
-
+    // Нужно написать в калькуляторе метод вычисления суммы покупки со скидкой и проверить его, используя AssertJ
+    // Примерная сигнатура и тело метода:
     public static double calculatingDiscount(double purchaseAmount, int discountAmount) {
-        double discountedAmount = 0;
+        // purchaseAmount - сумма покупки
+        // discountAmount - размер скидки
+
+        double discountedAmount = 0; // Сумма со скидкой (первоначальная сумма - скидка%)
 
         if (purchaseAmount >= 0) {
 
             if (discountAmount >= 0 && discountAmount <= 100) {
                 discountedAmount = purchaseAmount - (purchaseAmount * discountAmount) / 100;
+                return discountedAmount;
             } else {
                 throw new ArithmeticException("Скидка должна быть в диапазоне от 0 до 100%");
             }
+
         } else {
+            // Сумма покупки не может быть отрицательной
             throw new ArithmeticException("Сумма покупки не может быть отрицательной");
         }
-
-        return discountedAmount;
     }
-
-    /**
-     * Задание 2 лекции: Добавьте функцию возведения в степень в калькулятор и протестируйте
-     */
+    //HW2.3L: Добавьте функцию возведения в степень в калькулятор и протестируйте
     public static int pow(int value, int powValue) {
         int result = 1;
 
         for (int a = 1; a <= powValue; a++) {
             if (a == 0) return 1;
             result = result * value;
-
         }
         return result;
     }

@@ -1,7 +1,10 @@
 package seminars.second.simple_shopping_cart;
 
 import org.junit.jupiter.api.Test;
+
+import seminars.second.model.Cart;
 import seminars.second.model.Product;
+import seminars.second.model.Shop;
 
 import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
@@ -31,6 +34,13 @@ class ShopTest {
 
     private ByteArrayOutputStream output = new ByteArrayOutputStream();
 
+    // private Shop shop;
+    // private Cart cart;
+    //  @BeforeEach
+    //  void setup() {
+    //      shop = new Shop(getStoreItems());
+    //      cart = new Cart(shop);
+    //  }
 
 /*
             ID | Название  | Цена, р. | Кол-во в магазине, шт.
@@ -57,9 +67,10 @@ class ShopTest {
     @Test
     void priceCartIsCorrectCalculated() {
         // Arrange (Подготовка)
-
+        Shop shop = new Shop(getStoreItems());
+        Cart cart = new Cart(shop);
         // Act (Выполнение)
-
+        cart.addProductToCartByID(1); // 170 +
         // Assert (Проверка утверждения)
 
     }
@@ -189,7 +200,11 @@ class ShopTest {
     //          Shop shop = new Shop(getStoreItems());
     //          Cart cart = new Cart(shop);
     //      }
+    
+    @Test
+    void testSUM() {
 
+    }
 
     /**
      * 2.10. Нужно изменить тест по следующим критериям:

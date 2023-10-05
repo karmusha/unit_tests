@@ -1,13 +1,10 @@
 {
-    "java.project.sourcePaths": ["src"],
-    "java.project.outputPath": "target\\classes",
     "java.project.referencedLibraries": [
-        "C:\\Users\\karmu\\.m2\\repository\\**\\*.jar"
+        "lib/**/*.jar",
+        "libs\\assertj-core-3.23.1.jar",
+        "libs\\junit-jupiter-api-5.9.1.jar",
+        "libs\\junit-jupiter-params-5.9.1.jar",
+        "libs\\junit-platform-commons-1.9.1.jar"
     ],
     "java.configuration.updateBuildConfiguration": "interactive",
-
-    "java.completion.favoriteStaticMembers": [
-        "org.assertj.core.api.Assertions.*"
-    ],
-    "java.dependency.showMembers": true
 }
