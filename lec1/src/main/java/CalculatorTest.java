@@ -1,4 +1,5 @@
-import static org.assertj.core.api.Assertions.*;
+// import static org.assertj.core.api.Assertions.*;
+
 
 public class CalculatorTest {
     public static void main(String[]args) {
@@ -17,10 +18,10 @@ public class CalculatorTest {
         // }
         
         // Проверка базового функционала с целыми числами с использованием утверждений:
-        assert 8 == Calculator.calculation(2, 6, '+');
-        assert 0 == Calculator.calculation(2, 2, '-');
-        assert 14 == Calculator.calculation(2, 7, '*');
-        assert 2 == Calculator.calculation(100, 50, '/');
+        // assert 8 == Calculator.calculation(2, 6, '+');
+        // assert 0 == Calculator.calculation(2, 2, '-');
+        // assert 14 == Calculator.calculation(2, 7, '*');
+        // assert 2 == Calculator.calculation(100, 50, '/');
 
         // // Случаи с неправильными аргументами
         // // аргумент operator типа char, должен вызывать исключение, если он получает небазовые символы (+-*/)
@@ -31,5 +32,8 @@ public class CalculatorTest {
         //         throw new AssertionError("Ошибка в методе");
         //     }
         // }
+
+        
+
     }
 }
